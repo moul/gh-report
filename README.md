@@ -7,6 +7,8 @@ Dense GitHub report of open issues and PRs that deserve attention.
 Requires Go 1.25+ and an authenticated [GitHub CLI](https://cli.github.com/).
 Edit `repos.txt` to select repositories. Each fetch stores up to 50 open issues
 and 50 open PRs per repository in the gitignored `data/` directory.
+A fetch with any failed request exits nonzero and retains that repository's
+previous snapshot.
 
 
     make fetch    # one GraphQL call per repo in repos.txt
